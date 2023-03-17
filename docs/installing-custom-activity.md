@@ -14,7 +14,7 @@ Installing a Custom Activity into your own Marketing Cloud instance is actually 
 2. Create a Marketing Cloud Installed Package 
 
 ## 1. Deploy Code to Heroku
-We've made it super easy for you to deploy this project to your own Heroku account! Simply go to this project's [github page](https://github.com/balwillSFDC/sfmc-my-custom-acitivty), and click the "Deploy to Heroku" button - Make sure you're logged into Heroku!
+We've made it super easy for you to deploy this project to your own Heroku account! Simply go to this project's [github page](https://github.com/xfulton-salesforce/sfmc-custom-activity), and click the "Deploy to Heroku" button - Make sure you're logged into Heroku!
 ![deploy-to-heroku](./docs-assets/deploy-to-heroku-button.PNG)
 
 After clicking the "Deploy to Heroku" button, a new tab will open in Heroku and ask you to specify the name of your project in Heroku (don't worry, the name in Heroku won't show in SFMC) and __voilà__ ✨ - you deployed this project to your own Heroku account!

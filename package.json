@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/balwillSFDC/sfmc-my-custom-acitivty.git"
+    "url": "git+https://github.com/xfulton-salesforce/sfmc-custom-activity.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/balwillSFDC/sfmc-my-custom-acitivty/issues"
+    "url": "https://github.com/xfulton-salesforce/sfmc-custom-activity/issues"
   },
-  "homepage": "https://github.com/balwillSFDC/sfmc-my-custom-acitivty#readme",
+  "homepage": "https://github.com/xfulton-salesforce/sfmc-custom-activity#readme",
   "description": "",
   "dependencies": {
     "@salesforce-ux/design-system": "^2.17.4",

@@ -5,7 +5,7 @@ parent: Project Structure & Walkthrough
 --- 
 
 # Config.json
-Next, we'll begin with the Config.json file for the project (found [here](https://github.com/balwillSFDC/sfmc-my-custom-acitivty/blob/main/config-json.js)), which contains the metadata for your activity. It calls Journey Builder calls initially before loading in your activity and tells JB the following: 
+Next, we'll begin with the Config.json file for the project (found [here](https://github.com/xfulton-salesforce/sfmc-custom-activity/blob/main/config-json.js)), which contains the metadata for your activity. It calls Journey Builder calls initially before loading in your activity and tells JB the following: 
 - [API Version & Metadata](#api-version--metadata)*
 - [Activity Type](#activity-type)*
 - [Language](#language)*

@@ -7,7 +7,7 @@ nav_order: 3
 # Testing Locally
 *The following assumes you have git installed and it is your first time testing the project. App is launched on [http://localhost:3000/](http://localhost:3000/)*
 ```
-git clone https://github.com/balwillSFDC/sfmc-my-custom-acitivty
+git clone https://github.com/xfulton-salesforce/sfmc-custom-activity
 npm install
 npm start
 ```
