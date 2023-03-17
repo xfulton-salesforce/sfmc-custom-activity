@@ -145,7 +145,8 @@ app.post('/execute', async (req, res) => {
           url: urlString,
           data: JSON.stringify(payload),
           headers: {
-            CustomAccept: 'StaticTestValue'
+            CustomAccept: 'StaticTestValue',
+            CustomContent: 'application/json'
           }
         }
       } else {
@@ -153,7 +154,8 @@ app.post('/execute', async (req, res) => {
           method: 'POST',
           url: urlString,
           headers: {
-            CustomAccept: 'StaticTestValue'
+            CustomAccept: 'application/json;v=1',
+            CustomContent: 'application/json'
           }
         }
       }
