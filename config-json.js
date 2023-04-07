@@ -41,6 +41,7 @@ module.exports = function configJSON(req) {
         retryDelay: 1000,
         // the number of concurrent requests JB will send all together
         concurrentRequests: 5,
+        useJWT: false,
         securityOptions: {
           securityType: 'securityContext',
           securityContextKey: 'sc_logging_target'
