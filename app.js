@@ -143,11 +143,7 @@ app.post('/execute', async (req, res) => {
         reqOptions = {
           method: 'POST',
           url: urlString,
-          data: JSON.stringify(payload),
-          securityOptions: {
-            securityType: 'securityContext',
-            securityContextKey: 'sc_logging_target'
-          },             
+          data: JSON.stringify(payload),             
           headers: {
             CustomAccept: 'application/json;v=1',
             CustomContent: 'application/json'
@@ -156,11 +152,7 @@ app.post('/execute', async (req, res) => {
       } else {
         reqOptions = {
           method: 'POST',
-          url: urlString,
-          securityOptions: {
-            securityType: 'securityContext',
-            securityContextKey: 'sc_logging_target'
-          },             
+          url: urlString,         
           headers: {
             CustomAccept: 'application/json;v=1',
             CustomContent: 'application/json'

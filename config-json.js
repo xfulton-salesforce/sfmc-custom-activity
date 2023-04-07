@@ -20,7 +20,7 @@ module.exports = function configJSON(req) {
     type: 'REST',
     lang: {
       'en-US': {
-        name: 'Custom Code Activity v4',
+        name: 'Custom Code Activity v5',
         description: 'Makes a POST call with payload to a specific URL'
       }
     },
@@ -41,6 +41,10 @@ module.exports = function configJSON(req) {
         retryDelay: 1000,
         // the number of concurrent requests JB will send all together
         concurrentRequests: 5,
+        securityOptions: {
+          securityType: 'securityContext',
+          securityContextKey: 'sc_logging_target'
+        },        
         url:`https://${req.headers.host}/execute`,
       },
     },
