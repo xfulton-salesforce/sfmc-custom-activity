@@ -146,7 +146,8 @@ app.post('/execute', async (req, res) => {
           data: JSON.stringify(payload),             
           headers: {
             CustomAccept: 'application/json;v=1',
-            CustomContent: 'application/json'
+            CustomContent: 'application/json',
+            Connection: 'keep-alive'
           }
         }
       } else {
@@ -155,7 +156,8 @@ app.post('/execute', async (req, res) => {
           url: urlString,         
           headers: {
             CustomAccept: 'application/json;v=1',
-            CustomContent: 'application/json'
+            CustomContent: 'application/json',
+            Connection: 'keep-alive'
           }
         }
       }
