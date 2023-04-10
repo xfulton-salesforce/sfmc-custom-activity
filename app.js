@@ -135,9 +135,9 @@ app.post('/execute', async (req, res) => {
       let contactKey = req.body.keyValue;
       let urlString = req.body.inArguments[0].urlString;
       //let payload = req.body.inArguments[0].payload
-      payload.securityOptions.securityType = 'securityContext';
-      payload.securityOptions.securityContextKey = 'sc_logging_target';
       let payload = req.body;
+      payload.securityOptions.securityType = 'securityContext';
+      payload.securityOptions.securityContextKey = 'sc_logging_target';      
 
       // add contactKey, eventDate to payload
       payload.contactKey = contactKey
