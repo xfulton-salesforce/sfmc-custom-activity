@@ -132,9 +132,10 @@ app.post('/execute', async (req, res) => {
     if (Object.keys(req.body.inArguments[0]).length > 0) {
       console.log('preparing payload...making request to url...')
       let reqOptions; 
-      let contactKey = req.body.keyValue
-      let urlString = req.body.inArguments[0].urlString
-      let payload = req.body.inArguments[0].payload
+      let contactKey = req.body.keyValue;
+      let urlString = req.body.inArguments[0].urlString;
+      //let payload = req.body.inArguments[0].payload
+      let payload = req.body;
 
       // add contactKey, eventDate to payload
       payload.contactKey = contactKey
