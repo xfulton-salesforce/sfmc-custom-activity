@@ -136,13 +136,6 @@ app.post('/execute', async (req, res) => {
       let urlString = req.body.inArguments[0].urlString;
       let payload = req.body.inArguments[0].payload;
 
-      // Add security options to payload
-      payload.useJWT = false;
-      payload.securityOptions = {
-          securityType: 'securityContext',
-          securityContextKey: 'sc_logging_target'
-      }
-
       // add contactKey, eventDate to payload
       payload.contactKey = contactKey
             
@@ -151,11 +144,6 @@ app.post('/execute', async (req, res) => {
           method: 'POST',
           url: urlString,
           data: JSON.stringify(payload),
-          useJWT: false,
-          securityOptions: {
-            securityType: 'securityContext',
-            securityContextKey: 'sc_logging_target'
-          },                       
           headers: {
             CustomAccept: 'application/json;v=1',
             CustomContent: 'application/json',
@@ -165,12 +153,7 @@ app.post('/execute', async (req, res) => {
       } else {
         reqOptions = {
           method: 'POST',
-          url: urlString,
-          useJWT: false,
-          securityOptions: {
-            securityType: 'securityContext',
-            securityContextKey: 'sc_logging_target'
-          },                            
+          url: urlString,            
           headers: {
             CustomAccept: 'application/json;v=1',
             CustomContent: 'application/json',
