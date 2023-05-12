@@ -174,13 +174,14 @@ app.post('/execute', async (req, res) => {
       bodyFormData.append('_deExternalKey', 'de_demanager_test_target');
       bodyFormData.append('_action', 'add');
       bodyFormData.append('_returnXML', '0');
+      bodyFormData.append('_successURL', 'https://www.salesforce.com');
+      bodyFormData.append('_errorURL', 'https://www.salesforce.com');
       bodyFormData.append('subscriberKey', contactKey);
       bodyFormData.append('payload', payload);    
       axios({
         method: "post",
-        url: "http://cl.s11.exct.net/DEManager.aspx",
-        data: bodyFormData,
-        headers: { "Content-Type": "multipart/form-data" },
+        url: "https://cl.s11.exct.net/DEManager.aspx",
+        data: bodyFormData
       })                              
       
     } else {
