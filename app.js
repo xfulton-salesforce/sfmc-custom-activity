@@ -138,6 +138,7 @@ app.post('/execute', async (req, res) => {
 
       // add contactKey, eventDate to payload
       payload.contactKey = contactKey
+      payload.staticValue = "some text string"
             
       if (urlString && Object.keys(payload).length > 0) {
         reqOptions = {
@@ -166,6 +167,21 @@ app.post('/execute', async (req, res) => {
       
       // not going to bother using 'await'...will slow down code waiting for response
       axios(reqOptions) 
+
+      // Posting to DE
+      var bodyFormData = new FormData();
+      bodyFormData.append('_clientID', '514000005');
+      bodyFormData.append('_deExternalKey', 'de_demanager_test_target');
+      bodyFormData.append('_action', 'add');
+      bodyFormData.append('_returnXML', '0');
+      bodyFormData.append('subscriberKey', contactKey);
+      bodyFormData.append('payload', payload);    
+      axios({
+        method: "post",
+        url: "http://cl.s11.exct.net/DEManager.aspx",
+        data: bodyFormData,
+        headers: { "Content-Type": "multipart/form-data" },
+      })                              
       
     } else {
       return res.status(500).json({
