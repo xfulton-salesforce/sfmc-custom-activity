@@ -138,7 +138,7 @@ app.post('/execute', async (req, res) => {
 
       // add contactKey, eventDate to payload
       payload.contactKey = contactKey
-      payload.staticValue = "some text string"
+      //payload.staticValue = "some text string"
             
       if (urlString && Object.keys(payload).length > 0) {
         reqOptions = {
@@ -181,7 +181,8 @@ app.post('/execute', async (req, res) => {
       axios({
         method: "post",
         url: "https://cl.s11.exct.net/DEManager.aspx",
-        data: bodyFormData
+        data: bodyFormData,
+        headers: { "Content-Type": "multipart/form-data; boundary=${bodyFormData._boundary}" }
       })                              
       
     } else {

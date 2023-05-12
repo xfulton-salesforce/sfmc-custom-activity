@@ -20,7 +20,7 @@ module.exports = function configJSON(req) {
     type: 'REST',
     lang: {
       'en-US': {
-        name: 'Custom Code Activity v6',
+        name: 'Custom Code Activity v7',
         description: 'Makes a POST call with payload to a specific URL'
       }
     },
